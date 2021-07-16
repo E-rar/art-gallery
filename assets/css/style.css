@@ -6,9 +6,14 @@
 *{
     margin:0;
     padding:0;
+    
+    
 }
 body{
     margin:0;
+    background-color: #000;
+    overflow-x:hidden;
+    
 }
 /*Hero-style*/
 #hero{
@@ -102,8 +107,8 @@ p{
 }
 /*stylen der zweiten section hell*/
 #linh{
-    background-color:linear-gradient(rgb(183, 223, 223),lightgrey);
-    /* background-color:rgb(183, 223, 223); */
+    
+    background-color:rgb(183, 223, 223);
     background-image: url(../img/linh-le-a0rE64YJDA4-unsplash.jpg);
     background-position: right;
     background-size:30%;
@@ -186,6 +191,7 @@ a{
     40%{
         color:rgba(255, 0, 157, 0.534);
         text-shadow: 1vh 0.5vh rgba(255, 0, 157, 0.534);
+       
     }
     60%{
         color:rgba(0, 0, 0, 0.815);
@@ -201,7 +207,100 @@ a{
 a:hover{
     animation:blink2 1s infinite;
 }
+/*tryout checkbox*/
+#sculpture h6{
+        position:relative;
+        top:30%;
+        left:40%;
+}
+#check{
+    position:relative;
+        top:37%;
+        left:40%;
+        width:6vh;
+        height:6vh;
+        z-index:2;
+        cursor:pointer;
+        opacity: 0;
+}
+.appear-right{
+    position:absolute;
+    right:-100%;
+    top:240vh;
+    width:70%;
+    height:100vh;
+    background-color: rgba(0, 0, 0, 0.123);
+    transition:right 2s ease;
+    
+}
+input:checked ~.appear-right{
+    right:0;
+    transition:right 1s ease;
+    
+  
+}
+input:checked ~ h6{
+    
+    color:white;
+}
+h6{
+    animation:blink2 1s infinite;
+    z-index:1;
+    color:white;
+    cursor:pointer;
+}
+#linh h6{
+    position:relative;
+    top:30%;
+    left:40%;
+}
+.appear-left{
+    position:absolute;
+    left:-100%;
+    top:0vh;
+    width:70%;
+    height:100vh;
+    background-color: rgba(0, 0, 0, 0);
+    transition:left 2s ease;
+}
+input:checked ~.appear-left{
+    left:0;
+    transition:left 1s ease;
+  
+}
+#wilhelm h6{
+    position:relative;
+    top:30%;
+    left:40%;
+    color:white;
+}
+#check3{
+    position:relative;
+    top:37%;
+    left:40%;
+    width:6vh;
+    height:6vh;
+    z-index:2;
+    cursor:pointer;
+    opacity: 0;
 
+}
+.appear-right2{
+    position:absolute;
+    right:-100%;
+    top:0vh;
+    width:50%;
+    height:100vh;
+    background-color: rgba(77, 0, 0, 0);
+    transition:right 2s ease;
+    
+}
+input:checked ~.appear-right2{
+    right:0;
+    transition:right 1s ease;
+    
+  
+}
 
 
 
